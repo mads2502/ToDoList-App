@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="box" id="heading">
+        <h1>😎 <%= kindofDay%> </h1>
+    </div>
+
+
+
+<div class="box">
+
+
+      <%for(var i=0;i<listitems.length;i++){%>
+
+        <form action="/delete" method="post">
+
+
+      <div class="item">
+          <input type="checkbox" name="checkbox" value="<%=listitems[i]._id%>" onChange="this.form.submit()">
+            <p>
+
+          <%=listitems[i].name%>
+            </p>
+        </div>
+          </form>
+
+    <%  } %>
+
+
+
+  <form class="item" action="/" method="post">
+
+    <input type="text" name="task" value="" placeholder="Add task">
+    <br>
+  <button type="submit" name="button">👍</button>
+  </form>
+
+  </div>
+<footer>© With ❤️ from Maddy</footer>
+  </body>
+</html>
